@@ -1,0 +1,67 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build bundle --suppress-analytics --target /Users/anantawasthy/Documents/FlutterWorkspace/the_movie_db_clone_one/lib/main.dart --filesystem-scheme org-dartlang-root --depfile /Users/anantawasthy/Documents/FlutterWorkspace/the_movie_db_clone_one/build/app/intermediates/flutter/debug/snapshot_blob.bin.d --asset-dir /Users/anantawasthy/Documents/FlutterWorkspace/the_movie_db_clone_one/build/app/intermediates/flutter/debug/flutter_assets --debug
+
+## exception
+
+FileSystemException: FileSystemException: writeFrom failed, path = '/Users/anantawasthy/Documents/FlutterWorkspace/the_movie_db_clone_one/build/app/intermediates/flutter/debug/flutter_assets/platform_strong.dill' (OS Error: No space left on device, errno = 28)
+
+```
+#0      _RandomAccessFile.writeFrom.<anonymous closure> (dart:io/file_impl.dart:868:9)
+#1      _rootRunUnary (dart:async/zone.dart:1132:38)
+#2      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#3      _FutureListener.handleValue (dart:async/future_impl.dart:129:18)
+#4      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:642:45)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:671:32)
+#6      Future._completeWithValue (dart:async/future_impl.dart:486:5)
+#7      Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:516:7)
+#8      _rootRun (dart:async/zone.dart:1124:13)
+#9      _CustomZone.run (dart:async/zone.dart:1021:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#11     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#12     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#13     _runPendingImmediateCallback (dart:isolate/runtime/libisolate_patch.dart:115:13)
+#14     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, v0.8.2, on Mac OS X 10.13.6 17G65, locale en-IN)
+    • Flutter version 0.8.2 at /Users/anantawasthy/Documents/FlutterWorkspace/FlutterRepo/flutter
+    • Framework revision 5ab9e70727 (3 weeks ago), 2018-09-07 12:33:05 -0700
+    • Engine revision 58a1894a1c
+    • Dart version 2.1.0-dev.3.1.flutter-760a9690c2
+
+[!] Android toolchain - develop for Android devices (Android SDK 27.0.3)
+    • Android SDK at /Users/anantawasthy/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-28, build-tools 27.0.3
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[!] iOS toolchain - develop for iOS devices (Xcode 10.0)
+    • Xcode at /Applications/Xcode-beta.app/Contents/Developer
+    • Xcode 10.0, Build version 10L176w
+    ✗ ios-deploy not installed. To install:
+        brew install ios-deploy
+    • CocoaPods version 1.5.3
+
+[✓] Android Studio (version 3.1)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 25.0.1
+    • Dart plugin version 173.4700
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+
+[✓] VS Code (version 1.27.2)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 2.18.0
+
+[✓] Connected devices (1 available)
+    • Moto G 5 • ZY32224DHN • android-arm • Android 7.0 (API 24)
+
+! Doctor found issues in 2 categories.
+```
